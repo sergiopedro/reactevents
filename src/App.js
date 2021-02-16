@@ -10,13 +10,12 @@ class App extends Component {
             email: '',
             errors: []
         };
-
-
     }
-
 
     submitForm(event) {
         console.log("Submitting the form now...");
+        console.log(event);
+
     }
 
     displayForm() {
@@ -27,7 +26,7 @@ class App extends Component {
                 Password Confirmation: <input type="text" /><br />
                 Email: <input type="text" /><br />
                 <br />
-                <button onClick="{this.submitForm}">Submit</button>
+                <button onClick={this.submitForm}>Submit</button>
             </div>
         );
     }
@@ -39,14 +38,9 @@ class App extends Component {
                 <hr />
                 {this.displayForm()}
             </div>
-
         );
 
     }
-
-}
-submitForm(event) {
-    console.log("Submitting the form now...");
 }
 
 export default App;
