@@ -30,27 +30,7 @@ class App extends Component {
     }
 
     validatePasswordOnBlur(event) {
-        const password = event.target.value;
-        const errors = this.state.errors;
-        errors.push(this.validateNotEmpty("Password", password));
-        this.setState({ password, errors });
-    }
-
-    validatePasswordConfirmationOnBlur(event) {
-        const passwordConfirmation = event.target.value;
-        const errors = this.state.errors;
-        if (passwordConfirmation !== this.state.password) {
-            errors.push("Password must match password confirmation.");
-        }
-        this.setState({ passwordConfirmation, errors });
-    }
-
-    validateEmailOnBlur(event) {
-        const email = event.target.value;
-        const errors = this.state.errors;
-        errors.push(this.validateEmailFormat("Email", email));
-        this.setState({ email, errors });
-    }
+         }
 
     validateEmailFormat(fieldName, value) {
         let [lhs, rhs] = value.split('@');
